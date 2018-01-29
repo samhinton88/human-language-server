@@ -4,7 +4,7 @@
   "description": "Work in progress back-end solution for human language acquisition and training.",
   "main": "index.js",
   "scripts": {
-    "test": "nodemon --exec 'mocha -R --recursive'"
+    "test": "nodemon --exec 'mocha --recursive'"
   },
   "repository": {
     "type": "git",
