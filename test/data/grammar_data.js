@@ -2,10 +2,11 @@ module.exports = {
   testVerbs: {
     nadar: {
       infinitive: 'nadar',
-      instructions: {
+      instruction: {
         person: '2',
         count: 'sng',
-        mood: 'present'
+        mood: 'ind',
+        tense: 'pres'
       },
       expect: 'nadas'
     }

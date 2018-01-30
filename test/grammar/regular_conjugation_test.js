@@ -1,27 +1,33 @@
 const assert = require('assert');
 const { ConjugationHelper } = require('../../helpers/grammar')
-const { arVerb } = require('../data');
-console.log(arVerb.ar)
+const {
+  arVerb: {
+    testVerbs: { nadar }
+  }
+} = require('../data');
 
 describe('Regular Verbs', () => {
   let helper;
 
-  it(`conjugates ${arVerb}`, () => {
-    helper = new ConjugationHelper()
+  it("conjugates nadar in the second person singular indicative", () => {
+    const { instruction, infinitive, expect } = nadar;
+    const result = new ConjugationHelper(infinitive, instruction).call()
+    assert(expect === result);
   })
 })
 
 
 // module.exports = {
-//   ar: {
+//   testVerbs: {
 //     nadar: {
 //       infinitive: 'nadar',
-//       grammar: {
+//       instructions: {
 //         person: '2',
 //         count: 'sng',
 //         mood: 'present'
 //       },
-//       conjugation: 'nadas'
+//       expect: 'nadas'
 //     }
 //   }
 // }
+
