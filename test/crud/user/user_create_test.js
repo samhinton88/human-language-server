@@ -5,11 +5,11 @@ describe('User Creation', () => {
   let user;
 
   beforeEach( async () => {
-    user = await new User({
+    user = new User({
       email: 'email@email.com',
       password: 'password'
     })
-    .save();
+    await user.save();
   })
 
   it('saves a user', () => {
