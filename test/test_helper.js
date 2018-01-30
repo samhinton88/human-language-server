@@ -12,3 +12,8 @@ before((done) => {
       console.warn('Warning', error);
     });
 })
+
+beforeEach( async () => {
+  const { users } = mongoose.connection.collections;
+  await users.drop();
+})
