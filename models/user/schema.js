@@ -1,4 +1,5 @@
 const Schema = require('mongoose').Schema;
+const languageModuleSchema = require('./language_module_sub_doc');
 
 
 
@@ -17,5 +18,9 @@ module.exports = new Schema({
   password: {
     type: String,
     required: [true, 'User password is required']
-  }
+  },
+  settings: {
+    nativeLanguage: { type: String, default: 'english' },
+  },
+  languageModules: [languageModuleSchema]
 })
