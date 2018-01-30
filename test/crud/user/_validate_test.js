@@ -8,10 +8,9 @@ describe("User Validation", () => {
 
     try {
       const user = new User({ email: badEmail, password: password })
-      await user.save();
+      await user.save().exec();
       assert(false)
     } catch (err) {
-      console.log(err)
       assert(err)
     };
   });
@@ -21,7 +20,6 @@ describe("User Validation", () => {
     try {
     const user = new User({ email, password: badPassword });
       await user.save();
-      console.log('asdf')
       assert(false)
     } catch (err) {
       assert.ok(err.errors.password)
