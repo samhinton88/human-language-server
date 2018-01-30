@@ -1,13 +1,13 @@
 module.exports = {
-  ar: {
+  testVerbs: {
     nadar: {
       infinitive: 'nadar',
-      grammar: {
+      instructions: {
         person: '2',
         count: 'sng',
         mood: 'present'
       },
-      conjugation: 'nadas'
+      expect: 'nadas'
     }
   }
 }
