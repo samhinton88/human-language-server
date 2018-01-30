@@ -1,8 +1,8 @@
 const assert = require('assert');
 const { assertConjugation } = require('./_helper')
 const {
-  verbs: {
-    testVerbs: [nadar, comer]
+  regularVerbs: {
+    testVerbs: [nadar, comer, vivir]
   }
 } = require('../data');
 
@@ -16,21 +16,10 @@ describe('Regular Verbs', () => {
 
   it("conjugates comer in the first person singular indicative", () => {
     assertConjugation(comer);
+  });
+
+  it("conjugates vivir in the first person singular indicative", () => {
+    assertConjugation(vivir);
   })
 })
-
-
-// module.exports = {
-//   testVerbs: {
-//     nadar: {
-//       infinitive: 'nadar',
-//       instructions: {
-//         person: '2',
-//         count: 'sng',
-//         mood: 'present'
-//       },
-//       expect: 'nadas'
-//     }
-//   }
-// }
 

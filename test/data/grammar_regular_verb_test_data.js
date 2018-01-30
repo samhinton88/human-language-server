@@ -19,6 +19,16 @@ module.exports = {
         tense: 'pres'
       },
       expect: 'como'
+    },
+    {
+      infinitive: 'vivir',
+      instruction: {
+        person: '1',
+        count: 'sng',
+        mood: 'ind',
+        tense: 'pres'
+      },
+      expect: 'vivo'
     }
   ]
 }
