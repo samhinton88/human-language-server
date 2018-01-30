@@ -11,6 +11,8 @@ describe('User Read', () => {
   })
 
   it('reads an email address', async() => {
+    const returnedUser = await User.findOne({ email }).exec();
+    assert(returnedUser.email === email);
 
   })
 })
