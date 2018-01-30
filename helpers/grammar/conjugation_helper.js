@@ -1,14 +1,4 @@
-const endings = {
-  ar: {
-    ind: {
-      pres: {
-        2: {
-          sng: 'as'
-        }
-      }
-    }
-  }
-}
+const endings = require('./endings');
 // console.log(endings)
 // endings['ar']['ind']['pres']['2']['sng'] = 'as';
 
@@ -38,6 +28,7 @@ class ConjugationHelper {
   getVerbType(infinitive) {
     const char = infinitive.charAt(infinitive.length-2);
     const types = {a: 'ar', e: 'er', i: 'ir'};
+
     return types[char];
   }
 }

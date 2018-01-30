@@ -1,3 +1,3 @@
 exports.userData = require('./user_create_data');
-exports.arVerb = require('./grammar_data');
+exports.verbs = require('./grammar_data');
 

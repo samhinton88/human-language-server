@@ -1,10 +1,13 @@
 const assert = require('assert');
 const { ConjugationHelper } = require('../../helpers/grammar')
 const {
-  arVerb: {
-    testVerbs: { nadar }
+  verbs: {
+    testVerbs: [nadar, comer]
   }
 } = require('../data');
+
+console.log('nadar is', nadar)
+console.log('comer is', comer)
 
 describe('Regular Verbs', () => {
   let helper;
@@ -13,6 +16,13 @@ describe('Regular Verbs', () => {
     const { instruction, infinitive, expect } = nadar;
     const result = new ConjugationHelper(infinitive, instruction).call()
     assert(expect === result);
+  });
+
+  it("conjugates comer in the first person singular indicative", () => {
+    const { instruction, infinitive, expect } = comer;
+    const result = new ConjugationHelper(infinitive, instruction).call();
+    assert(expect === result);
+
   })
 })
 
