@@ -13,7 +13,7 @@ before((done) => {
     });
 })
 
-beforeEach( async () => {
+beforeEach(  (done) => {
   const { users } = mongoose.connection.collections;
-  await users.drop();
+  users.drop(() => done());
 })

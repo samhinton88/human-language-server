@@ -1,7 +1,6 @@
 const assert = require('assert');
 const User = require('../../../models/user');
 const { email, password } = require('../../data').userData;
-console.log(email)
 
 describe('User Delete', () => {
   let user;
