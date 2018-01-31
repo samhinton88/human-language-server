@@ -17,7 +17,13 @@ module.exports = new Schema({
   },
   password: {
     type: String,
-    required: [true, 'User password is required']
+    required: [true, 'User password is required'],
+    validate: {
+      validator: function(v) {
+        return /^(((?=.*[a-z])(?=.*[A-Z]))|((?=.*[a-z])(?=.*[0-9]))|((?=.*[A-Z])(?=.*[0-9])))(?=.{6,})/g.test(v);
+      },
+      message: 'Password is not strong enough'
+    }
   },
   settings: {
     nativeLanguage: { type: String, default: 'english' },

@@ -14,12 +14,20 @@ module.exports = {
   },
   er: {
     ind: {
-      pres: { 1: {sng: 'o'}, 2: {sng: 'es'} }
+      pres: { 1: {sng: 'o'}, 2: {sng: 'es'} },
+      pret: { 1: {sng: '', pl: ''}, 2: {sng: '', pl: ''}, 3: {sng: '', pl: ''} },
+      imp: { 1: {sng: '', pl: ''}, 2: {sng: '', pl: ''}, 3: {sng: '', pl: ''} },
+      cond: { 1: {sng: '', pl: ''}, 2: {sng: '', pl: ''}, 3: {sng: '', pl: ''} },
+      fut: { 1: {sng: '', pl: ''}, 2: {sng: '', pl: ''}, 3: {sng: '', pl: ''} },
     }
   },
   ir: {
     ind: {
-      pres: { 1: {sng: 'o'}, 2: {sng: 'es'} }
+      pres: { 1: {sng: 'o'}, 2: {sng: 'es'} },
+      pret: { 1: {sng: '', pl: ''}, 2: {sng: '', pl: ''}, 3: {sng: '', pl: ''} },
+      imp: { 1: {sng: '', pl: ''}, 2: {sng: '', pl: ''}, 3: {sng: '', pl: ''} },
+      cond: { 1: {sng: '', pl: ''}, 2: {sng: '', pl: ''}, 3: {sng: '', pl: ''} },
+      fut: { 1: {sng: '', pl: ''}, 2: {sng: '', pl: ''}, 3: {sng: '', pl: ''} },
     }
 
   }

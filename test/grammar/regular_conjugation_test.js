@@ -20,6 +20,6 @@ describe('Regular Verbs', () => {
 
   it("conjugates vivir in the first person singular indicative", () => {
     assertConjugation(vivir);
-  })
+  });
 })
 

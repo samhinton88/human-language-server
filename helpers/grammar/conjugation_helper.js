@@ -1,6 +1,5 @@
 const endings = require('./endings');
-// console.log(endings)
-// endings['ar']['ind']['pres']['2']['sng'] = 'as';
+
 
 class ConjugationHelper {
   constructor(infinitive, instruction) {

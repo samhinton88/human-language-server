@@ -5,24 +5,22 @@ const { badEmail, badPassword, email, password } = require('../../data').userDat
 
 describe("User Validation", () => {
   it('rejects user creation with a bad email', async () => {
-
     try {
       const user = new User({ email: badEmail, password: password })
-      await user.save().exec();
+      await user.save();
       assert(false)
     } catch (err) {
-      assert(err)
+      assert(err.errors.email)
     };
   });
 
   it('rejects user creation with a weak password', async () => {
-
-    try {
     const user = new User({ email, password: badPassword });
+    try {
       await user.save();
       assert(false)
     } catch (err) {
-      assert.ok(err.errors.password)
+      assert(err.errors.password)
     }
   })
 });
